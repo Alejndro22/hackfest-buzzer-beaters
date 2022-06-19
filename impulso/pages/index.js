@@ -1,9 +1,24 @@
+import { useAuth } from "../context/AuthContext";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
+  const { user, logout, cargando } = useAuth();
+
+  const handleLogout = async () => {
+    try {
+      await logout();
+      // Ir a login
+      router.push("/Login");
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+  if (cargando) return <h1>Cargando</h1>;
+
   return (
     <div className={styles.container}>
       <Head>
@@ -17,8 +32,10 @@ export default function Home() {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
         <Link href="/prueba" passHref>
-          <h1>Hola</h1>
+          <h1>Hola {user.email}</h1>
         </Link>
+
+        <button onClick={handleLogout}>Cerrar sesión</button>
 
         <p className={styles.description}>
           Get started by editing{" "}
