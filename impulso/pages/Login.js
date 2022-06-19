@@ -10,7 +10,7 @@ const Login = () => {
     password: "",
   });
 
-  const { user, login } = useAuth();
+  const { user, login, googleLogin } = useAuth();
   const [error, setError] = useState();
 
   const handleLogin = async (e) => {
@@ -21,7 +21,17 @@ const Login = () => {
       // Ir a pagina principal
       router.push("/PruebaMain");
     } catch (error) {
-      console.log(error.message);
+      setError(error.message);
+    }
+  };
+
+  const handleSignInGoogle = async () => {
+    setError("");
+    try {
+      await googleLogin();
+      // Ir a pagina principal
+      router.push("/PruebaMain");
+    } catch (error) {
       setError(error.message);
     }
   };
@@ -65,6 +75,9 @@ const Login = () => {
           </div>
           <button type="submit">Logearse</button>
         </form>
+      </div>
+      <div>
+        <button onClick={handleSignInGoogle}>¡Usa tu cuenta de Google!</button>
       </div>
     </>
   );

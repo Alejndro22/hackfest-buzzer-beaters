@@ -11,7 +11,7 @@ const SignUp = () => {
     password: "",
   });
 
-  const { signUp } = useAuth();
+  const { signUp, googleLogin } = useAuth();
   const [error, setError] = useState();
 
   const handleSignUp = async (e) => {
@@ -20,7 +20,18 @@ const SignUp = () => {
     try {
       await signUp(data.email, data.password);
       // Ir a pagina principal
-      router.push("/");
+      router.push("/PruebaMain");
+    } catch (error) {
+      setError(error.message);
+    }
+  };
+
+  const handleSignInGoogle = async () => {
+    setError("");
+    try {
+      await googleLogin();
+      // Ir a pagina principal
+      router.push("/PruebaMain");
     } catch (error) {
       setError(error.message);
     }
@@ -65,6 +76,9 @@ const SignUp = () => {
           </div>
           <button type="submit">Registrarse</button>
         </form>
+      </div>
+      <div>
+        <button onClick={handleSignInGoogle}>¡Usa tu cuenta de Google!</button>
       </div>
     </>
   );
