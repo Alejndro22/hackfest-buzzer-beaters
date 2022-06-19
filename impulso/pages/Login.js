@@ -10,7 +10,7 @@ const Login = () => {
     password: "",
   });
 
-  const { login } = useAuth();
+  const { user, login } = useAuth();
   const [error, setError] = useState();
 
   const handleLogin = async (e) => {
@@ -19,7 +19,7 @@ const Login = () => {
     try {
       await login(data.email, data.password);
       // Ir a pagina principal
-      router.push("/");
+      router.push("/PruebaMain");
     } catch (error) {
       console.log(error.message);
       setError(error.message);

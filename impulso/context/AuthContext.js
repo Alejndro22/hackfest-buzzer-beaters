@@ -19,18 +19,29 @@ export function AuthContextProvider({ children }) {
   const [user, setUser] = useState(null);
   const [cargando, setCargando] = useState(true);
 
-  const signUp = (email, password) =>
-    createUserWithEmailAndPassword(auth, email, password);
-
-  const login = (email, password) => {
-    signInWithEmailAndPassword(auth, email, password);
+  const signUp = (email, password) => {
+    return createUserWithEmailAndPassword(auth, email, password);
   };
 
-  const logout = () => signOut(auth);
+  const login = (email, password) => {
+    return signInWithEmailAndPassword(auth, email, password);
+  };
+
+  const logout = async () => {
+    await signOut(auth);
+  };
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
+      if (currentUser) {
+        setUser({
+          uid: currentUser.uid,
+          email: currentUser.email,
+          displayName: currentUser.displayName,
+        });
+      } else {
+        setUser(null);
+      }
       setCargando(false);
     });
 
@@ -39,7 +50,7 @@ export function AuthContextProvider({ children }) {
 
   return (
     <AuthContext.Provider value={{ signUp, login, logout, user, cargando }}>
-      {children}
+      {cargando ? null : children}
     </AuthContext.Provider>
   );
 }
