@@ -1,5 +1,5 @@
-require("dotenv").config();
 import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
 
 // Firebase config
 const firebaseConfig = {
@@ -13,5 +13,5 @@ const firebaseConfig = {
 };
 
 // Iniciar Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+export const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
