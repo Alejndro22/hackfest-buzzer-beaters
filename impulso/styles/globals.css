@@ -14,3 +14,109 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.imageLogo:hover {
+  cursor: pointer;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 130px repeat(3, 1fr);
+  grid-template-rows: 1fr repeat(2, 165px) 130px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  background: #F8F8F8;
+  margin-top: 70px;
+  border: 1px solid #F8F8F8;
+}
+  
+.div1 { 
+    grid-area: 2 / 1 / 3 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 55px; 
+}
+
+.div2 { 
+    grid-area: 3 / 1 / 4 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 15px; 
+}
+
+.div2 button {
+  background-color: #F48C06;
+  color: white;
+  width: 360px;
+  height: 65px;
+  border: 1px solid #F48C06;
+  border-radius: 8px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.div3 { 
+    grid-area: 2 / 5 / 4 / 8;
+    grid-template: max-content;
+    padding: 50px 0px; 
+} 
+
+.div3 img {
+  border-radius: 25px;
+  position: static;
+}
+
+.funcionamiento {
+  margin-top: 550px;
+}
+
+.ObjetivoNoveno {
+  margin-top: 450px;
+  background-color: #00A671;
+  padding: 5px 35px;
+  border: 1px solid #00A671;
+  border-radius: 5px;
+}
+
+.funcionamiento p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 40px;
+  text-align: justify;
+  color: #03071E;
+}
+
+.ObjetivoNoveno p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 40px;
+  text-align: justify;
+}
+
+.MetasObjetivo {
+  margin-top: 5px;
+  background-color: #00A671;
+  padding: 5px 35px;
+  border: 1px solid #00A671;
+  border-radius: 5px;
+}
+
+.MetasObjetivo ul {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 40px;
+  text-align: justify;
+}
+
+
+@media(max-width: 730px){
+  .imageLogo {
+    width: 100;
+    height: 100;
+  }
+}
