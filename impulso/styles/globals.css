@@ -26,7 +26,6 @@ a {
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   background: #F8F8F8;
-  margin-top: 70px;
   border: 1px solid #F8F8F8;
 }
   
@@ -35,7 +34,13 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 60px 55px; 
+    padding: 30px 55px;
+    margin-top: 50px;
+}
+
+.div1 h1 {
+  font-style: normal;
+  font-size: 40px;
 }
 
 .div2 { 
@@ -53,14 +58,15 @@ a {
   height: 65px;
   border: 1px solid #F48C06;
   border-radius: 8px;
-  font-size: 25px;
   font-weight: bold;
+  font-size: 30px;
+  text-align: center;
 }
 
 .div3 { 
     grid-area: 2 / 5 / 4 / 8;
     grid-template: max-content;
-    padding: 50px 0px; 
+    padding: 20px 0px;
 } 
 
 .div3 img {
@@ -70,14 +76,18 @@ a {
 
 .funcionamiento {
   margin-top: 550px;
+  background-color: #F8F8F8;
+  padding: 5px 75px;
+  border: 1px solid #F8F8F8;
+  border-radius: 15px;
 }
 
 .ObjetivoNoveno {
   margin-top: 450px;
-  background-color: #00A671;
-  padding: 5px 35px;
-  border: 1px solid #00A671;
-  border-radius: 5px;
+  background-color: #F8F8F8;
+  padding: 5px 75px;
+  border: 1px solid #F8F8F8;
+  border-radius: 15px;
 }
 
 .funcionamiento p {
@@ -99,9 +109,9 @@ a {
 
 .MetasObjetivo {
   margin-top: 5px;
-  background-color: #00A671;
-  padding: 5px 35px;
-  border: 1px solid #00A671;
+  background-color: #F8F8F8;
+  padding: 5px 15px;
+  border: 1px solid #F8F8F8;
   border-radius: 5px;
 }
 

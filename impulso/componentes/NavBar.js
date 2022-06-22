@@ -29,7 +29,7 @@ function NavBar() {
             </Link>
           </li>
           <li className='links'>
-            <Link href='' passHref>
+            <Link href='/Login' passHref>
               <a>Iniciar Sesion</a>
             </Link>
           </li>
