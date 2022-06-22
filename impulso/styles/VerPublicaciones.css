@@ -1,0 +1,34 @@
+.contenedorGeneral{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.contenedorPost {
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    background-color: #90ADC6;
+  }
+.contenedorAgregar {
+    width: 35%;
+    margin-top: 3px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    background-color: #FAD02C;
+  }
+
+  .principal{
+    margin-left:10%;
+  }
+
+  .tituloGeneral{
+    
+
+  }
