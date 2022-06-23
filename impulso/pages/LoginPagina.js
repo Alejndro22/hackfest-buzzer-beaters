@@ -22,10 +22,10 @@ function Login() {
                     <form>
                         <h1>Login to your account</h1>
                         <label>Usuario</label><br></br>
-                        <input type='text'></input>
+                        <input type='text' placeholder='Ingrese usuario'></input>
                         <br></br>
                         <label>contraseña</label><br></br>
-                        <input type='password' ></input><br></br>
+                        <input type='password' placeholder='Ingrese contraseña'></input><br></br>
                     </form>
                     <label className="divFormulario__label">¿Olvidaste tu contraseña?</label>
                     <button className="divFormulario__btn">Iniciar Sesion</button>

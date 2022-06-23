@@ -9,6 +9,7 @@ import { useEffect } from 'react'
 
 
 export default function Home() {
+
   const {ref, inView} = useInView({
     threshold: 0.1
   })
@@ -109,5 +110,5 @@ export default function Home() {
       </motion.div>  
       </div>
     </div>
-  )
+  );
 }

@@ -47,6 +47,8 @@
     width: 550px;
     height: 45px;
     font-size: 16px;
+    border: 2px solid #E8E8E8;
+    border-radius: 5px;
 }
 
 .divFormulario__label {
