@@ -3,10 +3,32 @@ import Image from 'next/image'
 import Link from 'next/link'
 import NavBar from '../componentes/NavBar'
 import styles from '../styles/Home.module.css'
-import { motion } from 'framer-motion'
-export default function Home() {
+import { motion, useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
+import { useEffect } from 'react'
 
-  
+
+export default function Home() {
+  const {ref, inView} = useInView({
+    threshold: 0.1
+  })
+  const animation = useAnimation()
+
+  useEffect(() =>{
+    console.log(inView);
+    if(inView){
+      animation.start({
+        x: 0,
+        transition: {
+          type: 'spring', duration: 1, bounce: 0.3
+        }
+      })
+    }
+    if(!inView){
+      animation.start({x: '-100vw'})
+    }
+  }, [inView, animation])
+
   return (
     <div className={styles.container}>
       <Head>
@@ -18,16 +40,7 @@ export default function Home() {
       
       <div className="parent">
         <div className="div1">
-          <motion.h1
-            initial={{scale: 0}}
-            animate= {{scale: 1}}
-            transition= {{
-              duration: 1, 
-              ease:'easeInOut',
-              delay: 0.3,
-              type:'spring'}}
-
-          >Impulsa tu proyecto a <br></br> otro nivel</motion.h1>
+          <h1>Impulsa tu proyecto a <br></br> otro nivel</h1>
         </div>
         <div className="div2">
           <button>Publica tu proyecto</button>
@@ -38,28 +51,25 @@ export default function Home() {
           </Link>
         </div>
       </div>
-
-      <div className='funcionamiento' name='comofunciona'>
-        <motion.h2
-        initial={{scale: 0}}
-        animate= {{scale: 1}}
-        transition= {{
-          duration: 1, 
-          ease:'easeInOut',
-          delay:0.2,
-          type:'spring'
-        }}
+      <div ref={ref}>
+        <motion.div className='funcionamiento' name='comofunciona'
+        animate= {animation}
         >
-          Cómo funciona
-        </motion.h2>
-        <div>
-          <p>
-            La idea principal del proyecto IMPULSA es que jóvenes empresarios guatemaltecos puedan contar con un sitio web para postear sus ideas que les permita tener visibilidad en sus proyectos, esto en base al Objetivo 9: Construir infraestructuras resilientes, promover la industrialización sostenible y fomentar la innovación. Se buscaría que los visitantes como tu o yo del sitio puedan navegar y descubrir proyectos que les llamen la atención e informarse del objetivo y plan que se tiene en cada uno, y en caso de querer apoyar ya sea intelectualmente o económicamente que puedan disponer de la información de contacto.
-          </p>
-        </div>
-      </div> 
+          <h2>
+            Cómo funciona
+          </h2>
+          <div>
+            <p>
+              La idea principal del proyecto IMPULSA es que jóvenes empresarios guatemaltecos puedan contar con un sitio web para postear sus ideas que les permita tener visibilidad en sus proyectos, esto en base al Objetivo 9: Construir infraestructuras resilientes, promover la industrialización sostenible y fomentar la innovación. Se buscaría que los visitantes como tu o yo del sitio puedan navegar y descubrir proyectos que les llamen la atención e informarse del objetivo y plan que se tiene en cada uno, y en caso de querer apoyar ya sea intelectualmente o económicamente que puedan disponer de la información de contacto.
+            </p>
+          </div>
+        </motion.div> 
+     
 
-      <div className='ObjetivoNoveno' name='ObjetivoODS'>
+
+      <motion.div className='ObjetivoNoveno' name='ObjetivoODS'
+      animate= {animation}
+      >
         <h2>Objetivo noveno de Desarrollo Sostenible </h2>
         <div>
           <p>
@@ -70,9 +80,12 @@ export default function Home() {
           La innovación y el progreso tecnológico son claves para descubrir soluciones duraderas para los desafíos económicos y medioambientales, como el aumento de la eficiencia energética y de recursos. A nivel mundial, la inversión en investigación y desarrollo (I+D), como porcentaje del PIB, aumentó de un 1,5 % en el 2000 a un 1,7 % en el 2015, y continuó casi en el mismo nivel en el 2017. Sin embargo, en las regiones en desarrollo fue inferior al 1 %.
           </p>
         </div>
-      </div>
+      </motion.div>
 
-      <div className='MetasObjetivo' name='ObjetivoODS'>
+
+      <motion.div className='MetasObjetivo' name='ObjetivoODS'
+      animate= {animation}
+      >
         <h2>Metas principales del Objetivo </h2>
         <div>
           <ul>
@@ -93,8 +106,8 @@ export default function Home() {
             </li>
           </ul>
         </div>
-      </div>  
-
+      </motion.div>  
+      </div>
     </div>
   )
 }
