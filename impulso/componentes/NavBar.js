@@ -5,7 +5,8 @@ import BurguerButton from './BurguerButton'
 
 function NavBar() {
   return (
-    <nav className='NavBarComponent'>
+    <div className='bg-amber-600'>
+      <nav className='NavBarComponent'>
       <div className='General_Container'>
         <ul className='General_Container__ListPages'>
           <li className='links'>
@@ -39,6 +40,8 @@ function NavBar() {
         <BurguerButton></BurguerButton>
       </div>
     </nav>
+    </div>
+    
   )
 }
 

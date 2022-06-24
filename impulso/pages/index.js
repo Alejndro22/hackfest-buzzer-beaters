@@ -39,7 +39,7 @@ export default function Home() {
       </Head>
       <NavBar></NavBar>
       
-      <div className="parent">
+      <div className="parent bg-orange-500">
         <div className="div1">
           <h1>Impulsa tu proyecto a <br></br> otro nivel</h1>
         </div>
