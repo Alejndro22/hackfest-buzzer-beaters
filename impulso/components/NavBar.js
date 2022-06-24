@@ -19,7 +19,7 @@ function NavBar() {
         <div className="General_Container">
           <ul className="General_Container__ListPages">
             <li className="links">
-              <Link href="" passHref>
+              <Link href="/VerPublicaciones" passHref>
                 <a>Explorar</a>
               </Link>
             </li>
@@ -29,7 +29,7 @@ function NavBar() {
               </Link>
             </li>
             <li>
-              <Link href="" passHref>
+              <Link href="/" passHref>
                 <Image
                   src="/logo.png"
                   alt="logo de la empresa"

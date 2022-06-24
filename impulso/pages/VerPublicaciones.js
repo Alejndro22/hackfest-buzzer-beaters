@@ -1,20 +1,17 @@
 import Publicaciones from "../components/Publicaciones";
 import AgregarPublicacion from "../components/AgregarPublicacion";
+import NavBar from "../components/NavBar";
 
 function VerPublicaciones(props) {
   return (
-    <div className="principal ">
-      <div className="tituloGeneeral">
-        <h1>
-          <b>Publicaciones</b>
-        </h1>
-      </div>
-      <div className="contenedorGeneral">
-        <div className="contenedorPost">
+    <div className="border bg-gray-50 ">
+      <NavBar></NavBar>
+      <h1 className="text-5xl mb-4 text-amber-600 ml-4">
+        <b>Publicaciones</b>
+      </h1>
+      <div className="">
+        <div className="">
           <Publicaciones></Publicaciones>
-        </div>
-        <div className="contenedorAgregar">
-          <AgregarPublicacion></AgregarPublicacion>
         </div>
       </div>
     </div>
