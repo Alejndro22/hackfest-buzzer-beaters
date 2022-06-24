@@ -8,7 +8,7 @@ function ProtectedRoute({ children }) {
 
   useEffect(() => {
     if (!user) {
-      router.push("/Login");
+      router.push("/LoginPagina");
     }
   }, [router, user]);
 

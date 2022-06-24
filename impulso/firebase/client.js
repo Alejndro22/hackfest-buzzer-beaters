@@ -1,11 +1,11 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-import {getFirestore} from "firebase/firestore"
-import { getStorage } from "firebase/storage"
+import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 
 // Firebase config
 const firebaseConfig = {
-  apiKey: "AIzaSyDI45gBFUacDScBTL3FJj301FS6Q1XyMmU",
+  apiKey: "",
   authDomain: "impulso-buzzer-beaters.firebaseapp.com",
   projectId: "impulso-buzzer-beaters",
   storageBucket: "impulso-buzzer-beaters.appspot.com",
