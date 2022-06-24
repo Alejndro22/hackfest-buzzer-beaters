@@ -5,7 +5,7 @@ import { getStorage } from "firebase/storage"
 
 // Firebase config
 const firebaseConfig = {
-  apiKey: "",
+  apiKey: "AIzaSyDI45gBFUacDScBTL3FJj301FS6Q1XyMmU",
   authDomain: "impulso-buzzer-beaters.firebaseapp.com",
   projectId: "impulso-buzzer-beaters",
   storageBucket: "impulso-buzzer-beaters.appspot.com",
