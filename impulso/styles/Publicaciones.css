@@ -1,20 +1,23 @@
-.PublicacionGeneral{
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-    background-color: #E9EAEC;
-
-    
+.PublicacionGeneral {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  background-color: #e9eaec;
 }
 
-.contenedorLetras{
-   
-
+.contenedorLetras {
+  max-height: 3.6em;
+  line-height: 1.8em;
+  display: block;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
 }
 
-.ContenedorImagen{
-    
-
+.ContenedorImagen {
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover;
 }
