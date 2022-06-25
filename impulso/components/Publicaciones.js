@@ -1,7 +1,8 @@
-import { React, useState, useEffect } from "react";
-import { db } from "../firebase/client.js";
-import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
-import Image from "next/image";
+import {React, useState, useEffect } from 'react'
+import {db} from "../firebase/client.js"
+import {collection, onSnapshot, orderBy, query} from "firebase/firestore";
+import EliminarPublicacion from "../components/EliminarPublicacion";
+import Image from 'next/image'
 
 export default function Publicaciones() {
   const [publicaciones, setPublicaciones] = useState([]);
@@ -19,6 +20,7 @@ export default function Publicaciones() {
     });
   }, []);
   return (
+
     <div className="grid grid-cols-2 gap-4">
       {publicaciones.length === 0 ? (
         <p>No hay publicaciones</p>
@@ -43,6 +45,7 @@ export default function Publicaciones() {
                 <h4>{publicacion.descripcion}</h4>
                 <h4>{publicacion.enlace}</h4>
                 <h4>{publicacion.ubicacion}</h4>
+                <EliminarPublicacion id={publicacion.id}/>
               </div>
             </div>
           </div>
