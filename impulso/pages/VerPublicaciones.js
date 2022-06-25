@@ -7,7 +7,7 @@ function VerPublicaciones(props) {
     <div className="border bg-gray-50 ">
       <NavBar></NavBar>
       <h1 className="text-5xl mb-4 text-amber-600 ml-4">
-        <b>Publicaciones</b>
+        <b>Proyectos</b>
       </h1>
       <div className="">
         <div className="">
