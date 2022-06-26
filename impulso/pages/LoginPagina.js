@@ -39,6 +39,7 @@ function Login() {
   };
 
   return (
+    // <div className="grid h-screen place-items-center">
     <div className="General">
       <div className="divRojo"></div>
       <div className="divImg"></div>
@@ -64,7 +65,7 @@ function Login() {
               }
             ></input>
             <br></br>
-            <label>contraseña</label>
+            <label>Contraseña</label>
             <br></br>
             <input
               id="password"
@@ -82,24 +83,26 @@ function Login() {
             <br></br>
 
             <label className="divFormulario__label">
-              ¿Olvidaste tu contraseña?
+              <Link href="/SignUp" passHref>
+                <a>¿No tienes una cuenta? Registrate con correo</a>
+              </Link>
             </label>
             <button className="divFormulario__btn" type="submit">
-              Iniciar Sesion
+              Iniciar Sesión
             </button>
           </form>
           <div className="divFormulario__register">
             <label>
-              Unicamente tenemos inicio de Sesion{" "}
+              También puedes iniciar sesion{" "}
               <Link href="/SignUp" passHref>
-                <a>Con Google</a>
+                <a>con Google</a>
               </Link>
             </label>
             <button
               className="divFormulario__btngoogle"
               onClick={handleSignInGoogle}
             >
-              Registrate con Google
+              Inicia sesión con Google
             </button>
           </div>
         </div>

@@ -29,13 +29,14 @@ function NavBar() {
               </Link>
             </li>
             <li>
-              <Link href="/" passHref>
+              <Link href="/">
                 <Image
                   src="/logo.png"
                   alt="logo de la empresa"
                   layout="fixed"
                   width={200}
                   height={200}
+                  priority
                   className="imageLogo"
                 ></Image>
               </Link>

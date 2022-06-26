@@ -9,8 +9,10 @@ import {
 } from "react-icons/bi";
 import EliminarPublicacion from "../components/EliminarPublicacion";
 import Image from "next/image";
+import { useAuth } from "../context/AuthContext";
 
 export default function Publicaciones() {
+  const { user } = useAuth();
   const [publicaciones, setPublicaciones] = useState([]);
 
   useEffect(() => {
@@ -22,26 +24,23 @@ export default function Publicaciones() {
         ...doc.data(),
       }));
       setPublicaciones(publicaciones);
-      console.log(publicaciones);
     });
   }, []);
   return (
-    <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-4 mx-4">
+    <div className="grid md:grid-cols-2 sm:grid-cols-1 2xl:grid-cols-3 gap-4 mx-4">
       {publicaciones.length === 0 ? (
         <p>No hay publicaciones</p>
       ) : (
         publicaciones.map((publicacion) => (
           <div
-            className="bg-white break-inside-avoid rounded-lg mb-4 text-left justify-between h-52 w-auto border border-amber-600 shadow-md col-span-1 "
+            className="bg-white break-inside-avoid rounded-lg mb-4 text-left justify-between h-40 w-auto border border-amber-600 shadow-md col-span-1 "
             key={publicacion.id}
           >
             <div className="grid grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-x-4 p-2">
-              <div className="col-span-1 w-full relative">
+              <div className="col-span-1 w-full relative ">
                 <Image
                   src={publicacion.imagen}
                   alt="titulo"
-                  width="100%"
-                  height="100%"
                   layout="fill"
                   className="rounded-lg "
                 ></Image>
@@ -51,7 +50,12 @@ export default function Publicaciones() {
                   <h2 className="text-amber-600 text-2xl truncate">
                     {publicacion.titulo}
                   </h2>
-                  <EliminarPublicacion className="mr-4 " id={publicacion.id} />
+                  {user.uid == publicacion.autor ? (
+                    <EliminarPublicacion
+                      className="mr-4 "
+                      id={publicacion.id}
+                    />
+                  ) : null}
                 </div>
                 <div className="place-items-center flex">
                   <BiCalendar className="mr-2 shrink-0"></BiCalendar>
@@ -74,7 +78,7 @@ export default function Publicaciones() {
                   <p className="truncate">{publicacion.ubicacion}</p>
                 </div>
                 <div className="flex">
-                  <BiMessageAltDetail className="mr-2 shrink-0 mt-2"></BiMessageAltDetail>
+                  <BiMessageAltDetail className="mr-2 shrink-0 mt-1"></BiMessageAltDetail>
                   <p className="truncate">{publicacion.descripcion}</p>
                 </div>
               </div>

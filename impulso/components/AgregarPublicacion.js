@@ -8,8 +8,10 @@ import {
 import { React, useState } from "react";
 import { storage, db } from "../firebase/client";
 import { getDownloadURL, uploadBytesResumable, ref } from "firebase/storage";
+import { useAuth } from "../context/AuthContext";
 
 export default function AgregarPublicacion() {
+  const { user } = useAuth();
   const [formData, setFormData] = useState({
     titulo: "",
     descripcion: "",
@@ -31,8 +33,6 @@ export default function AgregarPublicacion() {
 
   const handlePublicar = (e) => {
     e.preventDefault();
-    console.log("aqui");
-    console.log(formData);
     if (
       !formData.titulo ||
       !formData.descripcion ||
@@ -79,6 +79,7 @@ export default function AgregarPublicacion() {
             enlace: formData.enlace,
             ubicacion: formData.ubicacion,
             imagen: url,
+            autor: user.uid,
             createdAt: Timestamp.now().toDate(),
           })
             .then(() => {
@@ -107,9 +108,9 @@ export default function AgregarPublicacion() {
   return (
     <div
       id="ModalPost"
-      className=" overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full"
+      className=" overflow-y-auto overflow-x-hidden fixed grid h-screen place-items-center z-50 w-full  md:inset-0 h-modal md:h-full"
     >
-      <div className="relative p-4 w-full max-w-md h-full md:h-auto">
+      <div className="relative p-4 w-full max-w-xl h-full md:h-auto">
         <div className="relative bg-orange-50 rounded-lg shadow bord">
           <button
             type="button"
@@ -131,7 +132,6 @@ export default function AgregarPublicacion() {
             >
               <div>
                 <div className="sticky top-4 ">
-                  <h2>Crear Articulo</h2>
                   <label className="block mb-2 text-sm font-medium text-gray-900 ">
                     Titulo
                   </label>
@@ -145,7 +145,7 @@ export default function AgregarPublicacion() {
                   ></input>
 
                   <label className="block mb-2 text-sm font-medium text-gray-900 ">
-                    Descripcion
+                    Descripción
                   </label>
                   <textarea
                     name="descripcion"
@@ -168,7 +168,7 @@ export default function AgregarPublicacion() {
                   ></input>
 
                   <label className="block mb-2 text-sm font-medium text-gray-900 ">
-                    Ubicacion
+                    Ubicación
                   </label>
                   <input
                     type="text"
@@ -206,15 +206,6 @@ export default function AgregarPublicacion() {
               >
                 Publicar
               </button>
-              <div className="text-sm font-medium text-gray-500 ">
-                Necesitas estar registrado{" "}
-                <a
-                  href="/LoginPage"
-                  className="text-orange-700 hover:underline "
-                >
-                  Inicia Sesion
-                </a>
-              </div>
             </form>
           </div>
         </div>

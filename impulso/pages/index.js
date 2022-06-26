@@ -19,7 +19,6 @@ export default function Home() {
   const animation = useAnimation();
 
   useEffect(() => {
-    console.log(inView);
     if (inView) {
       animation.start({
         x: 0,
@@ -71,15 +70,13 @@ export default function Home() {
           </button>
         </div>
         <div className="div3">
-          <Link href="" passHref>
-            <Image
-              src="/imagepage.jpg"
-              alt="Foto de inicio"
-              width={490}
-              height={550}
-              layout="fixed"
-            ></Image>
-          </Link>
+          <Image
+            src="/imagepage.jpg"
+            alt="Foto de inicio"
+            width={490}
+            height={550}
+            layout="fixed"
+          ></Image>
         </div>
       </div>
       <div ref={ref}>

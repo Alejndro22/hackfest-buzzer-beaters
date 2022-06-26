@@ -17,7 +17,7 @@ export default function EliminarPublicacion({ id }) {
   return (
     <div>
       <button
-        className="border border-amber-600 text-amber-600 hover:bg-rose-600 hover:text-white font-bold py-2 px-4 rounded"
+        className="border border-amber-600 text-amber-600 bg-orange-100 hover:bg-rose-600 hover:text-white font-bold px-4 rounded text-sm"
         onClick={procesoEliminar}
       >
         Eliminar
