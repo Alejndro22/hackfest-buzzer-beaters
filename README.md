@@ -7,7 +7,7 @@
 ***
 La idea principal del proyecto https://hackfest-buzzer-beaters.vercel.app/ es que jóvenes empresarios guatemaltecos puedan contar con un sitio web para postear sus ideas que les permita tener visibilidad en sus proyectos, esto en base al Objetivo 9 de los ODS. Se buscaría que los visitantes como tu o yo del sitio puedan navegar y descubrir proyectos que les llamen la atención e informarse del objetivo y plan que se tiene en cada uno, y en caso de querer apoyar ya sea intelectualmente o económicamente que puedan disponer de la información de contacto.
 ### Screenshot
-![Image text]('./impulso/public/Screen.png')
+![Image text](./impulso/public/Screen.png)
 ## Tecnologias
 ***
 Las tecnologias implementadas en el proyecto:
