@@ -95,6 +95,7 @@ export default function AgregarPublicacion() {
       }
     );
     document.getElementById("upload-files").value = "";
+    alert("Proyecto publicado correctamente");
   };
 
   const handleHide = (e) => {

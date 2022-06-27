@@ -22,7 +22,14 @@ const SignUp = () => {
       // Ir a pagina principal
       router.push("/");
     } catch (error) {
-      setError(error.message);
+      setError(error);
+      console.log(error.code);
+
+      if (error.code === "auth/weak-password") {
+        alert("Contraseña muy débil, por favor use 6 dígitos");
+      } else if (error.code === "auth/email-already-in-use") {
+        alert("Correo ya fue registrado");
+      }
     }
   };
 
