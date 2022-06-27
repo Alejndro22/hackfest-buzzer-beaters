@@ -4,7 +4,7 @@ import Image from "next/image";
 import BurguerButton from "../componentes/BurguerButton";
 import { useAuth } from "../context/AuthContext";
 
-function NavBar() {
+export default function NavBar() {
   const { user, logout } = useAuth();
   const handleLogout = async () => {
     try {
@@ -29,7 +29,7 @@ function NavBar() {
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/" passHref>
                 <Image
                   src="/logo.png"
                   alt="logo de la empresa"
@@ -78,5 +78,3 @@ function NavBar() {
     </nav>
   );
 }
-
-export default NavBar;
