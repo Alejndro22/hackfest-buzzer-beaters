@@ -4,7 +4,7 @@ import NavBarResponsive from "../components/NavBarResponsive";
 
 function VerPublicaciones(props) {
   return (
-    <div className=" bg-gray-50 h-full">
+    <div className="DivPublicaciones bg-gray-50 h-full">
       <NavBarResponsive className="flex"></NavBarResponsive>
       <h1 className="text-5xl mb-4 text-amber-600 ml-16">
         <b>Proyectos</b>
