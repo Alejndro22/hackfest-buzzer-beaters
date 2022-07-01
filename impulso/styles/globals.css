@@ -69,6 +69,8 @@ a {
 
 .div3 {
   display: flex;
+  width: 490px;
+  height: 550px;
   grid-area: 2 / 5 / 4 / 8;
   grid-template: max-content;
   padding: 20px 0px;
@@ -141,7 +143,7 @@ a {
     border: 1px solid #f8f8f8;
   }
 
-  .div1 h1{
+  .div1 h1 {
     position: absolute;
     font-size: 20px;
     line-height: 25px;
@@ -159,7 +161,7 @@ a {
     width: 250px;
     height: 75px;
   }
-  .div2 button{
+  .div2 button {
     margin-top: -50px;
     font-size: 20px;
   }
@@ -181,11 +183,16 @@ a {
     width: 650px;
   }
 
-  .ObjetivoNoveno{
+  .ObjetivoNoveno {
     width: 650px;
   }
 
   .MetasObjetivo {
     width: 650px;
+  }
+
+  .NavBR {
+    width: 680px;
+    padding-right: 30px;
   }
 }
