@@ -10,6 +10,7 @@ import AgregarPublicacion from "../components/AgregarPublicacion";
 import { useAuth } from "../context/AuthContext";
 import { useRouter } from "next/router";
 import NavBarResponsive from "../components/NavBarResponsive";
+import FooterPage from "../components/FooterPage";
 
 export default function Home() {
   const router = useRouter();
@@ -105,7 +106,27 @@ export default function Home() {
               </p>
             </div>
           </motion.div>
-
+          <motion.div
+            className=" funcionamiento bg-slate-100 rounded-lg my-3 mx-20 py-4"
+            name="comofunciona"
+            animate={animation}
+            id="DivFuncionamiento"
+          >
+            <h2 className="text-2xl font-bold mb-4">Contexto guatemalteco</h2>
+            <div className="text-justify">
+              <p>
+                Teniendo en cuenta la situacion social guatemalteca, la idea principal
+                del proyecto es que jovenes empresarios guatemaltecos puedan contar con un sitio web
+                para postear ideas que les permita tener visibilidad y asi mismo apoyo,
+                esto en base al objetivo 9: construir infraestructuras resilientes,
+                promover la industrialización sostenible y fomentar la innovación. Se
+                buscaria que los visitantes del sitio web puedan navegar y descubrir 
+                proyectos que les llame la atención e informarse del objetivo y plan que se tiene
+                en cada uno, y en caso de querer apoyar, puedan disponer de la informacion de
+                contacto del proyecto.
+              </p>
+            </div>
+          </motion.div>
           <motion.div
             className="ObjetivoNoveno bg-slate-100 rounded-lg my-3 md:mx-20 py-4 mb-12"
             name="ObjetivoODS"
@@ -193,6 +214,9 @@ export default function Home() {
             </div>
           </motion.div>
         </div>
+      </div>
+      <div>
+        <FooterPage></FooterPage>
       </div>
     </>
   );
