@@ -69,11 +69,14 @@ export default function NavBar() {
                 <button onClick={handleLogout}>Logout</button>
               ) : null}
             </li>
+            <li>
+            </li>
           </ul>
+          <div className="burguer">
+            <BurguerButton></BurguerButton>
+          </div>
         </div>
-        <div className="burguer">
-          <BurguerButton></BurguerButton>
-        </div>
+
       </div>
     </nav>
   );

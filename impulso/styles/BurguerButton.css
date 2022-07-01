@@ -2,10 +2,10 @@
     width: 35px;
     height: 30px;
     margin: 10px 10px;
-    position: relative;
+    position: absolute;
     cursor: pointer;
     display: inline-block;
-    margin-top: 70px;
+    margin-top: -20px;
   }
   .nav-icon-5 span{
     background-color:#03071E;

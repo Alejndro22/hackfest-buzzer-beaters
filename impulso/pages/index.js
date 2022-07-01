@@ -55,36 +55,37 @@ export default function Home() {
         <link rel="icon" href="/rocket.svg" />
       </Head>
       <NavBar className="flex"></NavBar>
-      <div>
-        <div id="ModalPost" className="hidden">
-          <AgregarPublicacion></AgregarPublicacion>
-        </div>
-        <div className="parent">
-          <div className="div1">
-            <h1>
-              Impulsa tu proyecto a <br></br> otro nivel
-            </h1>
+        <div>
+          <div id="ModalPost" className="hidden">
+            <AgregarPublicacion></AgregarPublicacion>
           </div>
-          <div className="div2">
-            <button onClick={user != null ? handleHide : handleRedirect}>
-              Publica tu proyecto
-            </button>
+          <div className="parent">
+            <div className="div1">
+              <h1>
+                Impulsa tu proyecto a <br></br> otro nivel
+              </h1>
+            </div>
+            <div className="div2">
+              <button onClick={user != null ? handleHide : handleRedirect}>
+                Publica tu proyecto
+              </button>
+            </div>
+            <div className="div3">
+              <Image
+                src="/imagepage.jpg"
+                alt="Foto de inicio"
+                width={490}
+                height={550}
+                className={'imageInit'}
+              ></Image>
+            </div>
           </div>
-          <div className="div3">
-            <Image
-              src="/imagepage.jpg"
-              alt="Foto de inicio"
-              width={490}
-              height={550}
-              layout="fixed"
-            ></Image>
-          </div>
-        </div>
-        <div ref={ref} className="">
+        <div ref={ref} className="funcionamientoDiv">
           <motion.div
             className=" funcionamiento bg-slate-100 rounded-lg my-3 mx-20 py-4"
             name="comofunciona"
             animate={animation}
+            id='DivFuncionamiento'
           >
             <h2 className="text-2xl font-bold mb-4">Cómo funciona</h2>
             <div className="text-justify">

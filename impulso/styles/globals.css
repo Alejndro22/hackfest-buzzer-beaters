@@ -132,3 +132,60 @@ a {
     height: 100;
   }
 }
+
+@media only screen and (max-width: 700px) {
+  .parent {
+    width: 680px;
+    height: 250px;
+    background: #f8f8f8;
+    border: 1px solid #f8f8f8;
+  }
+
+  .div1 h1{
+    position: absolute;
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 500;
+    margin: 1rem 0 1em 1em;
+    left: 5px;
+  }
+
+  .div1 {
+    width: 250px;
+    height: 75px;
+  }
+
+  .div2 {
+    width: 250px;
+    height: 75px;
+  }
+  .div2 button{
+    margin-top: -50px;
+    font-size: 20px;
+  }
+
+  .div3 {
+    margin-left: -70px;
+    width: 300px;
+    height: 390px;
+  }
+
+  .imageInit {
+    width: 150px;
+    height: 250px;
+  }
+
+  .funcionamiento {
+    margin-left: -3px;
+    margin-top: 150px;
+    width: 650px;
+  }
+
+  .ObjetivoNoveno{
+    width: 650px;
+  }
+
+  .MetasObjetivo {
+    width: 650px;
+  }
+}

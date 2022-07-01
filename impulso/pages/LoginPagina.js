@@ -48,7 +48,9 @@ function Login() {
   return (
     // <div className="grid h-screen place-items-center">
     <>
-      <NavBar className=""></NavBar>
+   <NavBar></NavBar>
+    <div className="flex justify-center">
+      
       <div className="General -mt-8">
         <div className="divRojo"></div>
         <div className="divImg"></div>
@@ -101,7 +103,7 @@ function Login() {
               </button>
             </form>
             <div className="divFormulario__register">
-              <label>
+              <label className="LabelFInal">
                 También puedes iniciar sesion{" "}
                 <Link href="/SignUp" passHref>
                   <a>con Google</a>
@@ -137,6 +139,7 @@ function Login() {
           </Link>
         </div>
       </div>
+    </div>
     </>
   );
 }
