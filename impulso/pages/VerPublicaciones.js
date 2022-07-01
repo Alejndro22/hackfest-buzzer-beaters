@@ -1,6 +1,7 @@
 import Publicaciones from "../components/Publicaciones";
 import AgregarPublicacion from "../components/AgregarPublicacion";
 import NavBarResponsive from "../components/NavBarResponsive";
+import Footer from "../components/FooterPage";
 
 function VerPublicaciones(props) {
   return (
@@ -14,6 +15,7 @@ function VerPublicaciones(props) {
           <Publicaciones></Publicaciones>
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 }
