@@ -2,6 +2,7 @@ import Link from "next/link";
 import Router, { useRouter } from "next/router";
 import React, { useState } from "react";
 import { useAuth } from "../context/AuthContext";
+import NavBarResponsive from "../components/NavBarResponsive";
 
 const SignUp = () => {
   const router = useRouter();
@@ -46,6 +47,7 @@ const SignUp = () => {
 
   return (
     <>
+      <NavBarResponsive className="flex"></NavBarResponsive>
       <div className=" grid sm:grid-cols-1 md:grid-cols-5 lg:grid-cols-7 md:gap-4 place-content-center justify-items-center content-center mt-8">
         <form
           onSubmit={handleSignUp}

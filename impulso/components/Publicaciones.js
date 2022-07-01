@@ -27,7 +27,7 @@ export default function Publicaciones() {
     });
   }, []);
   return (
-    <div className="grid md:grid-cols-2 sm:grid-cols-1 2xl:grid-cols-3 gap-4 mx-4">
+    <div className="grid md:grid-cols-3 sm:grid-cols-1 2xl:grid-cols-3 gap-4 mx-4">
       {publicaciones.length === 0 ? (
         <p>No hay publicaciones</p>
       ) : (

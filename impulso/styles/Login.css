@@ -4,7 +4,6 @@
     grid-template-rows: 150px 550px 150px;
     grid-column-gap: 150px;
     grid-row-gap: 11px;
-    margin-left: 110px; 
 } 
 
 
@@ -110,4 +109,106 @@
 
 .divLogoRojo img {
     cursor: pointer;
+}
+
+@media only screen and (max-width: 700px){
+    .General_Container {
+        width: 640px;
+        height: 150px;
+    } 
+
+    .General {
+        width: 680px;
+        height: 150px;
+        margin-left: -120px;
+    }
+    .divFormulario {
+        
+    }
+
+    .divFormulario__input{
+        width: 480px;
+    }
+
+    .divLogoAzul{
+        display: none;
+    }
+    .divFormulario__btn {
+        width: 350px;
+        height: 50px;
+    } 
+    
+    .divFormulario__label{
+        width: 350px;
+    }
+
+    .divFormulario__label a{
+        font-size: 18px;
+    }
+
+    .divFormulario__input a {
+        font-size: 18px;
+    }
+
+    .divFormulario__input input{
+        width: 350px;
+        height: 35px;
+        font-size: 16px;
+        border: 2px solid #E8E8E8;
+        border-radius: 5px;
+    }
+
+    .divFormulario label{
+        font-size: 20px;
+    }
+
+    .divFormulario__btngoogle {
+        width: 350px;
+        height: 50px;
+        color: #fff;
+        font-size: 22px;
+        background-color: #2E4059;
+        border: 5px solid #2E4059;
+        border-radius: 5px;
+        background-image: url('/googlelogo.png');
+        background-repeat: no-repeat;
+        background-size: 27px;
+        background-position: 15px center;
+        cursor: pointer;
+    }
+
+    .divFormulario h1 {
+        margin-left: -250px;
+        font-weight: 500;
+    }
+
+    .LabelFInal {
+        margin-left: -200px;
+        font-size: 16px;
+    }
+
+    .divFormulario__register label {
+        font-size: 18px;
+    }
+    .divLogoRojo{
+        width: 1px;
+        height: 1px;
+    }
+
+    .divLogoAzul {
+        width: 1px;
+        height: 1px;
+    }
+    .divRojo {
+        display: none;
+    }
+    .divImgArriba {
+        display: none;
+    }
+    .divAzul {
+        display: none;
+    }
+    .divImg {
+        display: none;
+    }
 }
