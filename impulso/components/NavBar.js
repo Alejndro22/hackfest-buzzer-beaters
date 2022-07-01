@@ -47,9 +47,7 @@ export default function NavBar() {
               </Link>
             </li>
             <li className="links">
-              {user != null ? (
-                <a>{user.displayName || user.email}</a>
-              ) : (
+              {user != null ? null : (
                 <Link href="/LoginPagina" passHref>
                   <a>Iniciar Sesion</a>
                 </Link>
@@ -66,9 +64,11 @@ export default function NavBar() {
                 ></Image>
               ) : null}
             </li>
-            {user != null ? (
-              <button onClick={handleLogout}>Logout</button>
-            ) : null}
+            <li className="links">
+              {user != null ? (
+                <button onClick={handleLogout}>Logout</button>
+              ) : null}
+            </li>
           </ul>
         </div>
         <div className="burguer">
